@@ -2,8 +2,12 @@
 
 int main(void){
 
-    printf("12313");
-    puts("haha");
-    puts("hehahe");
+    int A , B , sum;
+    printf("enter A:");
+    scanf("%d",&A);
+    printf("enter B:");
+    scanf("%d",&B);
+    sum = A + B;
+    printf("Sum = %d \n",sum);
 
 }//end main
