@@ -1,7 +1,9 @@
-#include <stdio>
+#include<stdio.h>
 
 int main(void){
-    
-    printf('hehe');
+
+    printf("12313");
+    puts("haha");
+    puts("hehahe");
 
 }//end main
