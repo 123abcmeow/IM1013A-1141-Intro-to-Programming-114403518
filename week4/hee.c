@@ -15,13 +15,16 @@ int main(void){
             continue;
         }
         else if(igrade <= 100 || igrade >= 0){
+            if(igrade == -1){
+                break;
+            }
             itotal += igrade;
             icounter += 1;
             if(igrade >= 60){
                 printf("Pass\n");
                 ipass += 1;
             }
-            else if(igrade < 60 || igrade >= 0 || igrade != -1){
+            else if(igrade < 60 || igrade >= 0){
                 printf("Fail\n");
                 ifail += 1;
                 continue;
