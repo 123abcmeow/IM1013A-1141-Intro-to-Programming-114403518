@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(void){
 
-    int icounter = -1;
+    int icounter = 0;
     int itotal = 0;
     int igrade = 0;
     int ipass = 0 , ifail = 0;
@@ -33,13 +33,13 @@ int main(void){
     }
     if(icounter != 0){
         average =  (float)itotal/icounter;
-        printf("********************************\nPass:%d\nFail:%d\n",ipass,ifail);
+        printf("******************************************\nPass:%d\nFail:%d\n",ipass,ifail);
         printf("Students:%d\n",icounter);
         printf("Total Grade:%d\n",itotal);
         printf("Average:%.2f\n",average);
     }
     else{
-        printf("No grades were entered");
+        printf("No grades were entered\n");
     }
 
 }//end
