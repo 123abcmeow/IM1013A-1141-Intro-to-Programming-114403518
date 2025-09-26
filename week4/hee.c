@@ -33,11 +33,12 @@ int main(void){
     }
     if(icounter != 0){
         average =  (float)itotal/icounter;
-        printf("******************************************\nPass:%d\nFail:%d\n",ipass,ifail);
+        printf("******************************************\n");
         printf("Students:%d\n",icounter);
+        printf("Pass:%d\nFail:%d\n",ipass,ifail);
         printf("Total Grade:%d\n",itotal);
         printf("Average:%.2f\n",average);
-    }
+        }
     else{
         printf("No grades were entered\n");
     }
