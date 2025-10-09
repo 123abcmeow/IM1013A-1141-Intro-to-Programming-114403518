@@ -8,10 +8,10 @@ int main(void){
     printf("Balance setting:10000\n");
     printf("Current Balance: %d\n",ibalance);
 
-    printf("Enter your 4 digit password:");
+    printf("Enter your 4-digit password:");
     scanf("%d",&ipassword);
     while(ipassword < 1000 || ipassword > 9999){
-        printf("Password must be 4 digits!!!:");
+        printf("Password must be 4-digit!!!:");
         scanf("%d",&ipassword);
     }
     
@@ -29,7 +29,7 @@ int main(void){
         }
         else if(iwithdraw % 100 == 0 && iwithdraw != 0){
             while(ienter != ipassword){
-                printf("Enter Password(4 digits):");
+                printf("Enter Password(4-digit):");
                 scanf("%d",&ienter);
                 if(ienter != ipassword){
                     printf("Wrong Password\n");
