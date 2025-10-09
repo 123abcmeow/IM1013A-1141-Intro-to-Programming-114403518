@@ -8,6 +8,7 @@ int main(void){
     printf("Balance setting:10000\n");
     printf("Current Balance: %d\n",ibalance);
 
+    //加了設密碼
     printf("Enter your 4-digit password:");
     scanf("%d",&ipassword);
     while(ipassword < 1000 || ipassword > 9999){
