@@ -124,7 +124,7 @@ int main(void){
                 fprincipal = fprincipal / 6;
                 printf("Payment per Installment: %f\n",fprincipal);
             }
-            else if(iprincipal > 2000){
+            else if(fprincipal > 2000){
                 printf("Number of periods: 12\n");
                 printf("Handling Fee per period: 12\n");
                 printf("interest Rate per period: 1.50%%\n");
