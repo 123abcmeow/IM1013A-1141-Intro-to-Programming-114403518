@@ -4,6 +4,7 @@ int main(void){
     int iadult = 0;
     int istudent = 0;
     int itotal = 0;
+    float fprincipal = 0;
     float fsum = 0;
     int ismult5 = 0;
 
@@ -76,8 +77,65 @@ int main(void){
             }
         }
         if(ioption == 2){
-            printf("[option 2] Enter");
-        }
+            printf("[option 2] Enter printcipal in dollars(positive) or -1 to end:");
+            scanf("%f",&fprincipal);
+            if(fprincipal == -1){
+                printf("Program ended.\n");
+                break;
+            }
+            while(fprincipal <= 0){
+                printf("Principal must be positive value:\n");
+                printf("[option 2] Enter printcipal in dollars(positive):");
+                scanf("%f",&fprincipal);
+            }
+            printf("\n--- Installment Plan Summary ---\n");
+            printf("Principa: %f\n",fprincipal);
+            if(fprincipal < 500){
+                printf("Number of periods: 1\n");
+                printf("Handling Fee per period: 0\n");
+                printf("interest Rate per period: 0.00%%\n");
+                printf("Repayment (Compound on principal): %f\n",fprincipal);
+                printf("Total Handling Fee: 0\n");
+                printf("Total Repayment(Include Handling Fee): %f\n,fprincipal");
+                printf("Payment per Installment: %2.f\n",fprincipal);
+            }
+            else if(fprincipal >= 500 && fprincipal <= 1000){
+                printf("Number of periods: 3\n");
+                printf("Handling Fee per period: 20\n");
+                printf("interest Rate per period: 3.00%%\n");
+                fprincipal = (1 + 0.03)**3 * fprincipal;
+                printf("Repayment (Compound on principal): %2.f\n",fprincipal);
+                printf("Total Handling Fee: 60\n");
+                fprincipal = fprincipal + 60;
+                printf("Total Repayment(Include Handling Fee): %f\n,fprincipal");
+                fprincipal = fprincipal / 3;
+                printf("Payment per Installment: %f\n",fprincipal);
+
+            }
+            else if(iprincipal > 1000 && iprincipal <= 2000){
+                printf("Number of periods: 6\n");
+                printf("Handling Fee per period: 17\n");
+                printf("interest Rate per period: 2.50%%\n");
+                fprincipal = (1 + 0.025)**6 * fprincipal;
+                printf("Repayment (Compound on principal): %2.f\n",fprincipal);
+                printf("Total Handling Fee: 102\n");
+                fprincipal = fprincipal + 102;
+                printf("Total Repayment(Include Handling Fee): %f\n,fprincipal");
+                fprincipal = fprincipal / 6;
+                printf("Payment per Installment: %f\n",fprincipal);
+            }
+            else if(iprincipal > 2000){
+                printf("Number of periods: 12\n");
+                printf("Handling Fee per period: 12\n");
+                printf("interest Rate per period: 1.50%%\n");
+                fprincipal = (1 + 0.015)**3 * fprincipal;
+                printf("Repayment (Compound on principal): %2.f\n",fprincipal);
+                printf("Total Handling Fee: 144\n");
+                fprincipal = fprincipal + 144;
+                printf("Total Repayment(Include Handling Fee): %f\n,fprincipal");
+                fprincipal = fprincipal / 3;
+                printf("Payment per Installment: %f\n",fprincipal);
+            }
     }       
 
 }//end
