@@ -9,7 +9,6 @@ int main(void){
     float Bmi;
     printf("Enter hight and weight: ");
     scanf("%f %f", &a, &b);
-    a = a/100;
     Bmi = bmi(a, b);
     printf("BMI: %.2f\n", Bmi);
 }//end main
@@ -25,6 +24,7 @@ double division(int x, int y){
 }
 float bmi(float x, float y){
     float ans;
+    x = x/100;
     ans = y / (x * x);
     return ans;
 }
