@@ -97,4 +97,4 @@ int main(void){
         }//end switch
     }while(ioption != -1);
 
-}//end main
+}//end main 欸剛好100ㄏㄏ
