@@ -43,7 +43,7 @@ int main(void){
                 C = (inumber % 1000) / 100;
                 D = (inumber % 100) / 10;
                 E = inumber % 10;
-                //Using a dumb way to add zeros= =
+                //Using a dumb way to add zeros
                 for(int oooooo=0; oooooo<6; oooooo++){
                     zero[oooooo] = '\0';
                 }
