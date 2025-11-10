@@ -1,5 +1,7 @@
 #include<stdio.h>
 int main(void){
+    int multiplication(int, int);
+    int reverse_number(int);
     int ioption = 0;
     int inumber = 0;
     int ireverse = 0;
@@ -22,7 +24,8 @@ int main(void){
                 printf("\n ----Times Table---- \n");
                 for(int a=1; a<=9; a++){
                     for(int b=1; b<=9; b++){
-                        printf("%2d x%2d= %2d ",a,b,a*b);
+                        int ans = multiplication(a,b);
+                        printf("%2d x%2d= %2d ",a,b,ans);
                     }
                     puts("");
                 }
@@ -38,12 +41,12 @@ int main(void){
                     printf("Invalid number! Enter a number between 1 to 10000:");
                     scanf("%d",&inumber);
                 }
+                //Using a dumb way to add zeros
                 A = inumber / 10000;
                 B = (inumber % 10000) / 1000;
                 C = (inumber % 1000) / 100;
                 D = (inumber % 100) / 10;
                 E = inumber % 10;
-                //Using a dumb way to add zeros
                 for(int oooooo=0; oooooo<6; oooooo++){
                     zero[oooooo] = '\0';
                 }
@@ -65,22 +68,7 @@ int main(void){
                 else if(E==0){
                     zero[0] = '0';
                 }
-                if(A==0 && B==0 && C==0 && D==0){
-                    ireverse = E;
-                }
-                else if(A==0 && B==0 && C==0){
-                    ireverse = E*10 + D;
-                }
-                else if(A==0 && B==0){
-                    ireverse = E*100 + D*10 + C;
-                    }
-                else if(A==0){
-                    ireverse = E*1000 + D*100 + C*10 + B;
-                }
-                else{
-                    ireverse = E*10000 + D*1000 + C*100 + B*10 + A;
-                }
-                
+                ireverse = reverse_number(inumber);
                 printf("\n----Reversal Result---- \n");
                 printf("Original number N:%d\n",inumber);
                 printf("Reversed number R:%s%d\n\n",zero,ireverse);
@@ -96,5 +84,33 @@ int main(void){
             }
         }//end switch
     }while(ioption != -1);
-
-}//end main 欸剛好100ㄏㄏ
+}
+int multiplication(int a, int b){
+    int ans;
+    ans = a * b;
+    return ans;
+}
+int reverse_number(int N){
+    int A, B, C, D, E, R, ireverse;
+    A = N / 10000;
+    B = (N % 10000) / 1000;
+    C = (N % 1000) / 100;
+    D = (N % 100) / 10;
+    E = N % 10;
+    if(A==0 && B==0 && C==0 && D==0){
+        ireverse = E;
+    }
+    else if(A==0 && B==0 && C==0){
+        ireverse = E*10 + D;
+    }
+    else if(A==0 && B==0){
+        ireverse = E*100 + D*10 + C;
+        }
+    else if(A==0){
+        ireverse = E*1000 + D*100 + C*10 + B;
+    }
+    else{
+        ireverse = E*10000 + D*1000 + C*100 + B*10 + A;
+    }
+    return ireverse;
+}
