@@ -96,7 +96,7 @@ int main(void){
                 printf("interest Rate per period: 0.00%%\n");
                 printf("Repayment (Compound on principal): %f\n",fprincipal);
                 printf("Total Handling Fee: 0\n");
-                printf("Total Repayment(Include Handling Fee): %f\n,fprincipal");
+                printf("Total Repayment(Include Handling Fee): %f\n",fprincipal);
                 printf("Payment per Installment: %f\n",fprincipal);
             }
             else if(fprincipal >= 500 && fprincipal <= 1000){
@@ -107,7 +107,7 @@ int main(void){
                 printf("Repayment (Compound on principal): %2.f\n",fprincipal);
                 printf("Total Handling Fee: 60\n");
                 fprincipal = fprincipal + 60;
-                printf("Total Repayment(Include Handling Fee): %f\n,fprincipal");
+                printf("Total Repayment(Include Handling Fee): %f\n",fprincipal);
                 fprincipal = fprincipal / 3;
                 printf("Payment per Installment: %f\n",fprincipal);
 
@@ -120,7 +120,7 @@ int main(void){
                 printf("Repayment (Compound on principal): %f\n",fprincipal);
                 printf("Total Handling Fee: 102\n");
                 fprincipal = fprincipal + 102;
-                printf("Total Repayment(Include Handling Fee): %f\n,fprincipal");
+                printf("Total Repayment(Include Handling Fee): %f\n",fprincipal);
                 fprincipal = fprincipal / 6;
                 printf("Payment per Installment: %f\n",fprincipal);
             }
@@ -132,7 +132,7 @@ int main(void){
                 printf("Repayment (Compound on principal): %f\n",fprincipal);
                 printf("Total Handling Fee: 144\n");
                 fprincipal = fprincipal + 144;
-                printf("Total Repayment(Include Handling Fee): %f\n,fprincipal");
+                printf("Total Repayment(Include Handling Fee): %f\n",fprincipal);
                 fprincipal = fprincipal / 3;
                 printf("Payment per Installment: %f\n",fprincipal);
             }
