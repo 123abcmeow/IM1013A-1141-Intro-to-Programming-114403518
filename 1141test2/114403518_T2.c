@@ -20,8 +20,9 @@ int main(void){
         }
         switch(ioption){
             case 1:
+                printf("\n ---- Option 1 ---- \n");
                 int x=1;
-                printf("\nEnter the size of the triangle(1-20):");
+                printf("Enter the size of the triangle(1-20):");
                 scanf("%d", &isize);
                 while(isize < 1 || isize > 20){
                     printf("Invalid size! Enter the size of the triangle(1-20):");
@@ -35,14 +36,18 @@ int main(void){
                     }
                     puts("");
                 }
+                puts("");
                 break;
             case 2:
-                printf("\nEnter a decimal number:");
+                printf("\n ---- Option 2 ---- \n");
+                printf("Enter a decimal number:");
                 scanf("%d", &ideci);
                 printf("The binary number is: %d\n", convertToBinary(ideci));
+                puts("");
                 break;
             case 3:
-                printf("\nEnter the size of each quadrant(1-5):");
+                printf("\n ---- Option 3 ---- \n");
+                printf("Enter the size of each quadrant(1-5):");
                 scanf("%d", &qua);
                 while(qua < 1 || qua > 5){
                     printf("Invalid size! Enter the size of each quadrant(1-5):");
@@ -52,6 +57,7 @@ int main(void){
                 int r = qua * 2 + 1;
                 int c = qua * 2 + 1;
                 get_symbol(r, c, qua);
+                puts("");
                 break;
             case -1:
                 printf("End Program\n");
