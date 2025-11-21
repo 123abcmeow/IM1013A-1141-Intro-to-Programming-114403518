@@ -6,6 +6,7 @@ int main(void){
     int isize;
     int ideci;
     int qua;
+    int isdigit;
     while(ioption != -1){
         printf(" ==== Menu ==== \n");
         printf("1) Option 1 - Increase Number Triangle Pattern\n");
@@ -13,20 +14,22 @@ int main(void){
         printf("3) Option 3 - Printing a four-Quadrant Pattern\n");
         printf("(-1) end program\n");
         printf("Select:");
-        scanf("%d", &ioption);
-        while(ioption != -1 && (ioption < 1 || ioption > 3)){
-            printf("Invalid Option! Select again:");
-            scanf("%d", &ioption);
+        isdigit = scanf("%d", &ioption);
+        while((ioption != -1 && (ioption < 1 || ioption > 3)) || isdigit != 1){
+            while(getchar() != '\n');
+            printf("Invalid Option! Please Select Again:");
+            isdigit = scanf("%d", &ioption);
         }
         switch(ioption){
             case 1:
                 printf("\n ---- Option 1 ---- \n");
                 int x=1;
                 printf("Enter the size of the triangle(1-20):");
-                scanf("%d", &isize);
-                while(isize < 1 || isize > 20){
+                isdigit = scanf("%d", &isize);
+                while(isize < 1 || isize > 20 || isdigit != 1){
+                    while(getchar() != '\n');
                     printf("Invalid size! Enter the size of the triangle(1-20):");
-                    scanf("%d", &isize);
+                    isdigit = scanf("%d", &isize);
                 }
                 puts("");
                 for(int i = 1; i <= isize; i++){
@@ -41,17 +44,23 @@ int main(void){
             case 2:
                 printf("\n ---- Option 2 ---- \n");
                 printf("Enter a decimal number:");
-                scanf("%d", &ideci);
+                isdigit = scanf("%d", &ideci);
+                while(ideci < 0 || isdigit != 1){
+                    while(getchar() != '\n');
+                    printf("Invalid number! Enter a decimal number:");
+                    isdigit = scanf("%d", &ideci);
+                }
                 printf("The binary number is: %d\n", convertToBinary(ideci));
                 puts("");
                 break;
             case 3:
                 printf("\n ---- Option 3 ---- \n");
                 printf("Enter the size of each quadrant(1-5):");
-                scanf("%d", &qua);
-                while(qua < 1 || qua > 5){
+                isdigit = scanf("%d", &qua);
+                while(qua < 1 || qua > 5 || isdigit != 1){
+                    while(getchar() != '\n');
                     printf("Invalid size! Enter the size of each quadrant(1-5):");
-                    scanf("%d", &qua);
+                    isdigit = scanf("%d", &qua);
                 }
                 puts("");
                 int r = qua * 2 + 1;

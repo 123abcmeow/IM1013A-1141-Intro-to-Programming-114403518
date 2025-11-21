@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void){
     int num;
     printf("請輸入一個整數: ");
     
@@ -31,6 +31,4 @@ int main() {
             while (getchar() != '\n'); // 讀到換行為止，清掉錯誤輸入
         }
     }
-
-    return 0;
 }
