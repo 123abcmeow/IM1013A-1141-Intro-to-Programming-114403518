@@ -69,7 +69,7 @@ int main(void){
                 puts("");
                 break;
             case -1:
-                printf("End Program\n");
+                printf("Program ends.\n");
                 break;
             default:
                 printf("Invalid Option!\n");
