@@ -50,17 +50,32 @@ int main(void){
                 int iodd[isize];
                 int icounts[isize];
 
-                //printing original array
+                //making original array
                 printf("Original array:\n");
                 for(int i=0; i<isize; i++){
                     iarray[i] = rand()%11;
-                    printf("%d ",iarray[i]);
+                }
+
+                //bubble sort 0vs1, 1vs2...
+                for(int i = 0; i<isize; i++){
+                    for(int j = 0; j<isize-1; j++){
+                        if(iarray[j]>iarray[j+1]){
+                            int itemp = iarray[j];
+                            iarray[j] = iarray[j+1];
+                            iarray[j+1] = itemp;
+                        }//end j for
+                    }//end i for
+                }//end bubblelellelele
+
+                for(int i=0; i<isize; i++){
+                    printf("%d ",iarray[i]);//printing
                 }//end making iarray
+                
                 puts("");
                 seperate_even_odd(isize, iarray, ieven, iodd, icounts);
                 break;
             }
-            case 2:{//using "{}",the same reason as case 1
+            case 2:{//using "",the same reason as case 1
                 printf("\n ---Option 2--- \n");
                 printf("Enter matrix size N(1-5):");
                 iok = scanf("%d", &imatrix_size);
@@ -81,12 +96,9 @@ int main(void){
                 printf("\nTotal sum of upper traingle elements is:%d\n", upper_traingle(imatrix_size, mx));
                 break;
             }
-            case -1:{
+            case -1:
                 printf("end program.\n");
                 break;
-            }
-            default:
-                printf("Invalid input!");
         }//end switch
     }//end while
 
