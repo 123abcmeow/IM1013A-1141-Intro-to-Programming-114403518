@@ -70,7 +70,7 @@ int main(void){
                 for(int i=0; i<isize; i++){
                     printf("%d ",iarray[i]);//printing
                 }//end making iarray
-                
+
                 puts("");
                 seperate_even_odd(isize, iarray, ieven, iodd, icounts);
                 break;
@@ -148,4 +148,4 @@ int upper_traingle(int n, int matirx[][n]){
         k++;
     }
     return sum;
-}
+}//end triangle function
