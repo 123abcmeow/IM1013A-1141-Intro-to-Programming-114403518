@@ -1,5 +1,6 @@
 #include <stdio.h>
-#unclude <stdlib.h>
+#include <stdlib.h>
+#include <time.h>
 #define SIZE 5
 void InitializeArray(int size, int array[size]);
 void PrintArray(int size, int array[size]);
@@ -11,9 +12,9 @@ int main(void){
 
 }//end main
 void InitializeArray(int size, int array[size]){
-    srand(time(Null));
+    srand(time(NULL));
     for(int i = 0; i<size; i++){
-        array[i] = rand();
+        array[i] = rand()%10 + 1;
     }//end for
 }//end Initialize
 void PrintArray(int size, int array[size]){
