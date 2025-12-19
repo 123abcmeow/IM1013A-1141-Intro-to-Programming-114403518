@@ -10,7 +10,6 @@ int main(void){
     int ioption = 0;
     int iok = 0;
     int iN = 0;
-
     srand(time(0));
 
     while(ioption != -1){
@@ -33,9 +32,10 @@ int main(void){
         switch(ioption){
             case 1:{
                 printf("\nEnter the size of matrix(1-5):");
-                scanf("%d", &iN);
-                if(iN < 1 || iN > 5){
+                iok = scanf("%d", &iN);
+                if(iN < 1 || iN > 5 || iok != 1){
                     printf("Invalid input!\n");
+                    while(getchar() != '\n');
                     break;
                 }//return to main
 
@@ -52,9 +52,10 @@ int main(void){
 
             case 2:{
                 printf("\nEnter the size of matrix(1-5):");
-                scanf("%d", &iN);
-                if(iN < 1 || iN > 5){
+                iok = scanf("%d", &iN);
+                if(iN < 1 || iN > 5 || iok != 1){
                     printf("Invalid input!\n");
+                    while(getchar() != '\n');
                     break;
                 }//return to main
 
@@ -78,9 +79,10 @@ int main(void){
 
             case 3:{
                 printf("\nEnter the size of matrix(3-10):");
-                scanf("%d", &iN);
-                if(iN < 3 || iN > 10){
+                iok = scanf("%d", &iN);
+                if(iN < 3 || iN > 10 || iok != 1){
                     printf("Invalid input!\n");
+                    while(getchar() != '\n');
                     break;
                 }//return to main
 
@@ -115,6 +117,9 @@ void ring_traverse(int N, int A[][N], int top, int left, int bottom, int right){
         puts("");
     }
     printf("\n[Ring traverse output]\n");
+    for(int i = 0; i < 1 + 2*(N-1); i++){
+        
+    }
 
 
 }//end ring_traverse
@@ -168,7 +173,6 @@ void find_max_resourse_block(int N, int map[][N]){
                 }
             }
             array[co] = add;
-            printf("%d ", array[co]);
             add = 0;
             y++;
             co++;
@@ -188,6 +192,12 @@ void find_max_resourse_block(int N, int map[][N]){
     }//end find for
 
     printf("\nMaximum resourse sum : %d\n", max);
-    printf("Top left coordination:(%d, %d\n)",posi/N , posi%N);
+    printf("Top left coordination:(%d, %d)\n",posi/N , posi%N);
+    printf("Max resourse block:\n");
+    for(int i = posi/N; i < N; i++){
+        for(int j = posi%N; j < N; j++){
+            printf("%d ", map)
+        }
+    }
 
 }//end find max funnn
