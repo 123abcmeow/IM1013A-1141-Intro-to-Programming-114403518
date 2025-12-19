@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 #include<math.h>
+
 #define SIZE 6
 void counts(int ary[]);
 
